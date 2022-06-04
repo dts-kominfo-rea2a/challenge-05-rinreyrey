@@ -7,35 +7,32 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "2. Nama"
 // ...
 const sorter = (listNama, callbackSort) => {
-  return callbackSort(listNama);
+  const sortnya = callbackSort(listNama);
+  let no = 0;
+  const arraynya = [];
+  while (no < sortnya.length) {
+    let word = sortnya[no];
+    no += 1;
+    let words = no + ". " + word;
+    arraynya.push(words);
+  }
+  return arraynya;
+
+
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
 const sortAscending = (listNama) => {
   listNama.sort();
-  let no = 0;
-  const arraynya = [];
-  while (no < listNama.length) {
-    let word = listNama[no];
-    arraynya.push(word);
-    no++;
-  }
-  return arraynya;
+  return listNama;
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
 const sortDescending = (listNama) => {
   listNama.sort().reverse();
-  let no = 0;
-  const arraynya = [];
-  while (no < listNama.length) {
-    let word = listNama[no];
-    arraynya.push(word);
-    no++;
-  }
-  return arraynya;
+  return listNama;
 };
 
 // ! JANGAN DIMODIFIKASI
