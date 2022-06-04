@@ -18,9 +18,8 @@ const sortAscending = (listNama) => {
   const arraynya = [];
   while (no < listNama.length) {
     let word = listNama[no];
-    no += 1;
-    let words = no + ". " + word;
-    arraynya.push(words);
+    arraynya.push(word);
+    no++;
   }
   return arraynya;
 };
@@ -33,9 +32,8 @@ const sortDescending = (listNama) => {
   const arraynya = [];
   while (no < listNama.length) {
     let word = listNama[no];
-    no += 1;
-    let words = no + ". " + word;
-    arraynya.push(words);
+    arraynya.push(word);
+    no++;
   }
   return arraynya;
 };
